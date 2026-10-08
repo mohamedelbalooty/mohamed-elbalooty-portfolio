@@ -36,8 +36,6 @@ export const anaqeedAlFakhaProject: Project = {
   outcomes: [
     "Published on Google Play and Apple App Store, offering convenient fresh food delivery.",
   ],
-  appStoreUrl: "[ADD APP STORE URL]",
-  googlePlayUrl: "[ADD GOOGLE PLAY URL]",
   tags: ["E-commerce", "Grocery", "RTL", "Localization", "Fresh Produce"],
   relatedProjectSlugs: ["white-labeled-ecommerce"],
 };

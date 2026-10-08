@@ -6,7 +6,7 @@ export const whiteLabeledEcommerceProject: Project = {
   subtitle: "Enterprise Multi-Client Flutter Engine for Bagisto, OpenCart, Zid & Salla",
   category: "E-commerce",
   featured: true,
-  order: 4,
+  order: 6,
   shortDescription:
     "Engineered a scalable multi-tenant architecture delivering 6+ white-labeled Flutter mobile stores integrating Bagisto, OpenCart web services, and regional theme engines (zid.sa & salla.sa).",
   overview:

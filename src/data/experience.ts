@@ -42,6 +42,7 @@ export const experiences: ExperienceItem[] = [
       "App Store & Google Play Releases",
       "Cross-functional Collaboration",
     ],
+    projectSlugs: ["azda"],
   },
   {
     company: "Geexar",
@@ -87,7 +88,7 @@ export const experiences: ExperienceItem[] = [
       "Multi-Tenant Mobile Design",
       "Performance Tuning",
     ],
-    projectSlugs: ["white-labeled-ecommerce"],
+    projectSlugs: ["white-labeled-ecommerce", "iqamti"],
   },
   {
     company: "Crystal Mind",

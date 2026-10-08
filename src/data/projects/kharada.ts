@@ -36,8 +36,6 @@ export const kharadaProject: Project = {
   outcomes: [
     "Released to Google Play and Apple App Store, modernizing localized recycling logistics.",
   ],
-  appStoreUrl: "[ADD APP STORE URL]",
-  googlePlayUrl: "[ADD GOOGLE PLAY URL]",
   tags: ["E-commerce", "Recycling", "Sustainability", "Logistics", "Google Maps"],
   relatedProjectSlugs: ["ezhal-mowitak"],
 };

@@ -2,7 +2,7 @@ import { Project } from "./types";
 
 export const liratProject: Project = {
   slug: "lirat",
-  title: "Lirat",
+  title: "Lirat Wallet — محفظة ليرات",
   subtitle: "SaaS Digital Wallet & Financial Services Platform",
   category: "FinTech",
   featured: true,
@@ -93,6 +93,7 @@ export const liratProject: Project = {
     "Enabled business growth through predictable revenue streams via integrated payment and subscription flows.",
     "Elevated team velocity and code quality across the 5-member mobile engineering unit.",
   ],
+  googlePlayUrl: "https://play.google.com/store/apps/details?id=store.lirat.paymoney",
   tags: ["FinTech", "Digital Wallet", "SaaS", "Clean Architecture", "Team Leadership"],
   relatedProjectSlugs: ["p2p-syria", "card-app"],
 };

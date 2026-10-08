@@ -25,15 +25,16 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "Mohamed Elbalooty",
-  role: "Senior Flutter Developer",
-  subRole: "Flutter Team Lead",
-  tagline: "Architecting high-scale FinTech and mobile platforms with Clean Architecture, production reliability, and engineering leadership.",
+  role: "Flutter Team Lead",
+  subRole: "Senior Flutter Engineer",
+  tagline:
+    "Building, leading, and delivering production mobile applications — from architecture and development to App Store and Google Play release.",
   shortBio:
-    "Senior Flutter Developer and Team Leader with 5+ years of engineering experience across FinTech, E-commerce, ERP/POS, and healthcare. Specializing in Clean Architecture, SaaS flavor-based multi-client deployments, payment integrations, and developer enablement.",
+    "Flutter Team Lead with 5+ years of experience working across the full mobile software lifecycle — architecture, development, testing, release, and ongoing delivery — while leading mobile teams and adapting solutions across FinTech, E-commerce, Logistics, Hospitality, and POS/ERP for clients across Egypt, Saudi Arabia, the UAE, and Kuwait.",
   fullBio: [
-    "I am a Senior Flutter Developer and Mobile Team Leader based in Cairo, Egypt, with over 5 years of professional experience taking mobile products from architectural design to high-volume production releases on the Apple App Store and Google Play.",
-    "Throughout my career across FinTech platforms (including Lirat digital wallet, P2P Syria, and Card App), 6+ white-labeled e-commerce systems, and mission-critical POS/ECR hardware integrations, my focus has remained on maintainable architecture, robust state management, and strict separation of concerns.",
-    "As an engineering leader, I have led a 5-member mobile team through Agile sprint cycles, structured code reviews, architectural RFCs, and junior developer mentorship. Today, I leverage modern AI tooling as an engineering multiplier to accelerate delivery and elevate engineering standards.",
+    "I am a Flutter Team Lead and Senior Mobile Engineer based in Cairo, Egypt, with 5+ years of experience working across the full mobile software lifecycle — architecture, development, testing, release, and ongoing delivery — while leading mobile teams and adapting solutions to diverse business requirements.",
+    "Currently leading Flutter development at Tasawk, I design scalable, SaaS flavor-based architectures for multi-client deployments and own App Store and Google Play releases across multiple applications. Previously, I led a 5-member mobile team at Geexar, architecting fintech platforms including digital wallets (Lirat), P2P payments, and virtual card products (Card App).",
+    "I have delivered applications across a wide range of business models — fintech, e-commerce, healthcare, POS/ERP, logistics (including Hajj season mobility in Saudi Arabia), hospitality (IQAMTI hotel booking), and on-demand delivery — working with clients across Egypt, Saudi Arabia, the UAE, and Kuwait.",
   ],
   location: "Cairo, Egypt",
   email: "mohamedelbalooty123@gmail.com",
@@ -45,23 +46,23 @@ export const siteConfig: SiteConfig = {
   stats: [
     {
       value: "5+ Years",
-      label: "Production Engineering",
-      description: "Proven delivery across FinTech, E-commerce, ERP/POS, and Healthcare.",
+      label: "Full Lifecycle Ownership",
+      description: "Architecture, development, testing, release, and ongoing delivery across App Store & Google Play.",
     },
     {
-      value: "FinTech SaaS",
-      label: "Architecture & Security",
-      description: "Digital wallet, P2P payments, card management, and subscription systems.",
+      value: "4 Regions",
+      label: "Regional Market Delivery",
+      description: "Production client deployments across Egypt, Saudi Arabia, the UAE, and Kuwait.",
     },
     {
       value: "5 Engineers",
-      label: "Team Leadership",
-      description: "Led mobile engineering squad with Agile sprints, code reviews, and mentoring.",
+      label: "Squad Leadership",
+      description: "Led mobile engineering teams with Agile sprint cycles, code reviews, and developer mentoring.",
     },
     {
-      value: "6+ Multi-Tenant",
-      label: "White-Labeled Apps",
-      description: "SaaS flavor-based environments for enterprise web service integrations.",
+      value: "10+ Domains",
+      label: "Multi-Domain Breadth",
+      description: "Fintech, E-commerce, Logistics, Hospitality, POS/ERP, and On-Demand service platforms.",
     },
   ],
   navLinks: [

@@ -36,8 +36,6 @@ export const ezhalMowitakProject: Project = {
   outcomes: [
     "Deployed to Google Play and Apple App Store, streamlining everyday utility delivery.",
   ],
-  appStoreUrl: "[ADD APP STORE URL]",
-  googlePlayUrl: "[ADD GOOGLE PLAY URL]",
   tags: ["E-commerce", "Delivery", "Subscriptions", "Logistics", "Utilities"],
   relatedProjectSlugs: ["kharada"],
 };

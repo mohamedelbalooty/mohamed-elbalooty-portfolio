@@ -4,7 +4,7 @@ export const liaDeliveryProject: Project = {
   slug: "lia-delivery",
   title: "Lia Delivery",
   subtitle: "Courier Logistics & Real-Time Navigation Platform",
-  category: "E-commerce",
+  category: "Logistics",
   featured: false,
   order: 7,
   shortDescription:
@@ -36,8 +36,6 @@ export const liaDeliveryProject: Project = {
   outcomes: [
     "Released to Google Play and the Apple App Store, completing the end-to-end Lia fulfillment cycle.",
   ],
-  appStoreUrl: "[ADD APP STORE URL]",
-  googlePlayUrl: "[ADD GOOGLE PLAY URL]",
-  tags: ["E-commerce", "Delivery", "Logistics", "Google Maps", "Geolocation"],
-  relatedProjectSlugs: ["lia"],
+  tags: ["Logistics", "Delivery", "Google Maps", "Geolocation", "Clean Architecture"],
+  relatedProjectSlugs: ["lia", "azda"],
 };

@@ -2,6 +2,8 @@ import { Project, ProjectCategory } from "./types";
 import { liratProject } from "./lirat";
 import { p2pSyriaProject } from "./p2p-syria";
 import { cardAppProject } from "./card-app";
+import { azdaProject } from "./azda";
+import { iqamtiProject } from "./iqamti";
 import { whiteLabeledEcommerceProject } from "./white-labeled-ecommerce";
 import { posEcrSystemsProject } from "./pos-ecr-systems";
 import { liaProject } from "./lia";
@@ -11,11 +13,14 @@ import { kharadaProject } from "./kharada";
 import { ezhalMowitakProject } from "./ezhal-mowitak";
 
 export * from "./types";
+export { azdaProject, iqamtiProject };
 
 export const allProjects: Project[] = [
   liratProject,
   p2pSyriaProject,
   cardAppProject,
+  azdaProject,
+  iqamtiProject,
   whiteLabeledEcommerceProject,
   posEcrSystemsProject,
   liaProject,
@@ -43,7 +48,7 @@ export function getProjectsByCategory(category: ProjectCategory | "All"): Projec
 }
 
 export function getAllCategories(): ("All" | ProjectCategory)[] {
-  return ["All", "FinTech", "E-commerce", "ERP / POS"];
+  return ["All", "FinTech", "E-commerce", "Logistics", "Hospitality", "ERP / POS"];
 }
 
 export function getRelatedProjects(currentSlug: string, count: number = 3): Project[] {

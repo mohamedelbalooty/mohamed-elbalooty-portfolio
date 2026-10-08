@@ -62,6 +62,7 @@ export const cardAppProject: Project = {
     "Delivered bank-grade card management capabilities supporting Geexar's fintech ecosystem.",
     "Reduced customer support tickets for simple card control actions through intuitive self-service UX.",
   ],
+  googlePlayUrl: "https://play.google.com/store/apps/details?id=app.carda.app",
   tags: ["FinTech", "Card Management", "Security", "Clean Architecture", "Payments"],
   relatedProjectSlugs: ["lirat", "p2p-syria"],
 };

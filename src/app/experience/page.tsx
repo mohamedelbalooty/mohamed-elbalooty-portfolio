@@ -40,7 +40,7 @@ export default function ExperiencePage() {
 
         {/* Timeline */}
         <div className="relative border-l border-white/10 ml-4 sm:ml-6 pl-6 sm:pl-8 space-y-12">
-          {experiences.map((exp, index) => (
+          {experiences.map((exp) => (
             <div key={exp.company} className="relative group">
               {/* Timeline marker */}
               <div

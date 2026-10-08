@@ -1,31 +1,29 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { allProjects, getAllCategories, ProjectCategory } from "@/data/projects";
+import { allProjects, getAllCategories } from "@/data/projects";
 import { Container } from "@/components/layout/container";
 import { ArrowUpRight, Search, Building2, Layers } from "lucide-react";
+
+const categories = getAllCategories();
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const categories = getAllCategories();
-
-  const filteredProjects = useMemo(() => {
-    return allProjects.filter((project) => {
-      const matchesCategory =
-        selectedCategory === "All" || project.category === selectedCategory;
-      const matchesSearch =
-        searchQuery === "" ||
-        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.technologies.some((t) =>
-          t.toLowerCase().includes(searchQuery.toLowerCase())
-        );
-      return matchesCategory && matchesSearch;
-    });
-  }, [selectedCategory, searchQuery]);
+  const filteredProjects = allProjects.filter((project) => {
+    const matchesCategory =
+      selectedCategory === "All" || project.category === selectedCategory;
+    const matchesSearch =
+      searchQuery === "" ||
+      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.technologies.some((t) =>
+        t.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="py-12 md:py-20">

@@ -9,11 +9,9 @@ import {
   User,
   GraduationCap,
   Languages as LangIcon,
-  CheckCircle2,
   FileDown,
   ArrowRight,
   ShieldCheck,
-  Building2,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -59,7 +57,7 @@ export default function AboutPage() {
             About Mohamed Elbalooty
           </h1>
           <p className="text-base text-slate-400 leading-relaxed">
-            Senior Flutter Developer & Flutter Team Leader with 5+ years of software engineering experience specializing in FinTech platforms, scalable architecture, and production delivery.
+            Flutter Team Lead & Senior Flutter Engineer with 5+ years of software engineering experience working across the full mobile lifecycle — architecture, development, testing, release, and ongoing delivery.
           </p>
         </div>
 
@@ -68,7 +66,7 @@ export default function AboutPage() {
           {/* Main Story */}
           <div className="lg:col-span-8 space-y-6 text-sm sm:text-base text-slate-300 leading-relaxed">
             <p>
-              My engineering journey began with a degree in Computer Science & Information Technology from Mansoura University (2017–2021). From my earliest work building intuitive user experiences at WaitBuzz_Co and developing hardware-connected POS/ECR systems at Crystal Mind, my focus has been on building software that solves concrete operational and financial problems.
+              My engineering journey began with a degree in Computer Science & Information Technology from Mansoura University (2017–2021). From my earliest work building customer-facing features at WaitBuzz_Co and developing hardware-connected POS/ECR systems at Crystal Mind, my focus has been on building software that solves concrete operational and financial problems.
             </p>
 
             <p>
@@ -76,11 +74,15 @@ export default function AboutPage() {
             </p>
 
             <p>
-              At Geexar, I served as Senior Flutter Developer and led a 5-member mobile team delivering mission-critical FinTech platforms—including the digital wallet <strong className="text-white">Lirat</strong>, <strong className="text-white">P2P Syria</strong>, and <strong className="text-white">Card App</strong>. In these roles, security, transaction idempotency, and defensive error handling were foundational requirements.
+              At Geexar, I served as Senior Flutter Developer and led a 5-member mobile team delivering mission-critical FinTech platforms—including the digital wallet <strong className="text-white">Lirat</strong>, <strong className="text-white">P2P Syria</strong>, and <strong className="text-white">Card App</strong>. In these roles, transaction idempotency, security, and defensive error handling were foundational requirements.
             </p>
 
             <p>
-              Currently, as <strong className="text-white">Flutter Team Leader at Tasawk</strong>, I oversee mobile engineering across SaaS flavor-based environments, manage full release lifecycles on the Apple App Store and Google Play, and partner with product managers and backend architects to deliver scalable mobile business solutions.
+              Currently, as <strong className="text-white">Flutter Team Leader at Tasawk</strong>, I oversee mobile engineering across SaaS flavor-based environments, manage full release lifecycles on the Apple App Store and Google Play, and coordinate cross-functional teams to deliver scalable business solutions.
+            </p>
+
+            <p>
+              Throughout my career, I have delivered applications across a wide range of business models — <strong className="text-white">fintech, e-commerce, healthcare, POS/ERP, logistics (such as Hajj worker transit with Azda), hospitality (hotel reservations with IQAMTI), and on-demand delivery</strong> — working with clients and platforms across <strong className="text-white">Egypt, Saudi Arabia, the UAE, and Kuwait</strong>.
             </p>
 
             <div className="pt-4 flex flex-wrap items-center gap-3">
@@ -125,7 +127,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex items-center justify-between py-2 border-b border-white/5">
                   <span className="text-slate-400 font-mono">Current Title</span>
-                  <span className="text-indigo-400 font-semibold">{siteConfig.subRole}</span>
+                  <span className="text-indigo-400 font-semibold">{siteConfig.role}</span>
                 </div>
                 <div className="flex items-center justify-between py-2 border-b border-white/5">
                   <span className="text-slate-400 font-mono">Experience</span>

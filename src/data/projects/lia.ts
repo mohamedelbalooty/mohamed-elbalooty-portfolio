@@ -57,8 +57,6 @@ export const liaProject: Project = {
     "Successfully launched on both Google Play and the Apple App Store.",
     "Delivered a smooth, user-centric mobile purchasing flow.",
   ],
-  appStoreUrl: "[ADD APP STORE URL]",
-  googlePlayUrl: "[ADD GOOGLE PLAY URL]",
   tags: ["E-commerce", "Gifting", "Multi-Vendor", "Google Maps", "Payments"],
   relatedProjectSlugs: ["lia-delivery", "white-labeled-ecommerce"],
 };
