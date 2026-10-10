@@ -1,6 +1,7 @@
 export type ProjectCategory =
   | "FinTech"
   | "E-commerce"
+  | "Food & Delivery"
   | "Logistics"
   | "Hospitality"
   | "ERP / POS"

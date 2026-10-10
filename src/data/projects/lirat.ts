@@ -6,7 +6,7 @@ export const liratProject: Project = {
   subtitle: "SaaS Digital Wallet & Financial Services Platform",
   category: "FinTech",
   featured: true,
-  order: 1,
+  order: 10,
   shortDescription:
     "Architected and developed a SaaS-based digital wallet platform featuring secure payment integrations and subscription management under strict security requirements.",
   overview:

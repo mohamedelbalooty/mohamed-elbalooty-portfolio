@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
-import { experiences, education, languages } from "@/data/experience";
+import { experiences, education, languages, aiEngineering } from "@/data/experience";
 import { getProjectBySlug } from "@/data/projects";
 import { Container } from "@/components/layout/container";
 import {
@@ -12,6 +12,7 @@ import {
   ArrowRight,
   MapPin,
   Calendar,
+  Sparkles,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -150,6 +151,54 @@ export default function ExperiencePage() {
             </div>
           ))}
         </div>
+
+        {/* AI-Agent Engineering & Spec-Driven Development (SDD) */}
+        <section className="space-y-6 pt-4 border-t border-white/10">
+          <div className="space-y-3 max-w-3xl">
+            <div className="inline-flex items-center gap-2 text-xs font-mono text-indigo-400 uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>{aiEngineering.badge}</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white flex items-center gap-2.5">
+              <span>🤖</span>
+              <span>{aiEngineering.title}</span>
+            </h2>
+            <div className="rounded-xl border border-indigo-500/20 bg-indigo-950/20 p-4 text-xs sm:text-sm text-slate-300 leading-relaxed italic border-l-4 border-l-indigo-400">
+              {aiEngineering.summary}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {aiEngineering.workflows.map((wf) => (
+              <div
+                key={wf.title}
+                className="rounded-xl border border-white/10 bg-slate-900/40 p-6 space-y-3 hover:border-indigo-500/30 transition-colors"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-indigo-400 shrink-0" />
+                  <h3 className="text-sm font-bold text-white tracking-tight">
+                    {wf.title}
+                  </h3>
+                </div>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  {wf.description}
+                </p>
+                {wf.tools && wf.tools.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    {wf.tools.map((t) => (
+                      <span
+                        key={t}
+                        className="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-950/50 text-indigo-300 border border-indigo-500/20"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Education & Languages */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-12 border-t border-white/10">

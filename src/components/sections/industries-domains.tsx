@@ -13,6 +13,7 @@ import {
   Gift,
   Recycle,
   Droplets,
+  UtensilsCrossed,
   MapPin,
   Check,
   ArrowRight,
@@ -79,9 +80,16 @@ export function IndustriesDomains() {
     {
       name: "Circular Economy",
       icon: Recycle,
-      description: "Scrap material categorization, photo estimation, and scheduled doorstep truck collection.",
-      badge: "Kharada Recycling",
+      description: "Circular scrap recycling marketplace with 50K+ downloads in KSA, heavy driver fleet dispatch, and ERP valuation.",
+      badge: "Khurdah (50K+ Downloads)",
       accent: "text-teal-400 bg-teal-500/10 border-teal-500/20",
+    },
+    {
+      name: "Food & Beverage (QSR)",
+      icon: UtensilsCrossed,
+      description: "On-demand food ordering with meal customizers, takeaway pickup, and Sunmi POS hardware integration across 19 branches in KSA.",
+      badge: "Kufa (10K+ Downloads, 19 Branches)",
+      accent: "text-orange-400 bg-orange-500/10 border-orange-500/20",
     },
     {
       name: "Utility Subscriptions",
@@ -94,7 +102,7 @@ export function IndustriesDomains() {
 
   const regions = [
     { country: "Egypt", role: "Primary Engineering Hub & FinTech Releases" },
-    { country: "Saudi Arabia", role: "Zid/Salla E-commerce, Hajj Transit (Azda), Hotel Booking (IQAMTI)" },
+    { country: "Saudi Arabia", role: "Khurdah Recycling (50K+ Downloads), Al-Kufa QSR (10K+ Downloads, 19 Branches), Hajj Transit (Azda), Hotel Booking (IQAMTI), Zid/Salla Commerce" },
     { country: "United Arab Emirates", role: "Cross-Border FinTech & Multi-Client SaaS" },
     { country: "Kuwait", role: "Regional Commerce & Direct Payment Integrations" },
   ];

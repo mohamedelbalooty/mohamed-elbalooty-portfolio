@@ -6,7 +6,7 @@ export const posEcrSystemsProject: Project = {
   subtitle: "Point of Sale & Electronic Cash Register ERP Integration",
   category: "ERP / POS",
   featured: true,
-  order: 7,
+  order: 15,
   shortDescription:
     "Created and tested POS and ECR mobile applications serving enterprise ERP systems, architecting modular hardware SDK wrappers for physical receipt printers and card terminals.",
   overview:

@@ -1,32 +1,57 @@
 import { Project, ProjectCategory } from "./types";
-import { liratProject } from "./lirat";
-import { p2pSyriaProject } from "./p2p-syria";
-import { cardAppProject } from "./card-app";
-import { azdaProject } from "./azda";
-import { iqamtiProject } from "./iqamti";
-import { whiteLabeledEcommerceProject } from "./white-labeled-ecommerce";
-import { posEcrSystemsProject } from "./pos-ecr-systems";
+import { khurdahClientProject } from "./khurdah-client";
+import { khurdahDriverProject } from "./khurdah-driver";
+import { khurdahErpLogisticsProject } from "./khurdah-erp-logistics";
+import { kufaProject } from "./kufa";
+import { kufaManagerProject } from "./kufa-manager";
 import { liaProject } from "./lia";
 import { liaDeliveryProject } from "./lia-delivery";
 import { anaqeedAlFakhaProject } from "./anaqeed-al-fakha";
-import { kharadaProject } from "./kharada";
+import { cardAppProject } from "./card-app";
+import { liratProject } from "./lirat";
+import { azdaProject } from "./azda";
+import { iqamtiProject } from "./iqamti";
+import { p2pSyriaProject } from "./p2p-syria";
+import { whiteLabeledEcommerceProject } from "./white-labeled-ecommerce";
+import { posEcrSystemsProject } from "./pos-ecr-systems";
 import { ezhalMowitakProject } from "./ezhal-mowitak";
 
 export * from "./types";
-export { azdaProject, iqamtiProject };
-
-export const allProjects: Project[] = [
-  liratProject,
-  p2pSyriaProject,
-  cardAppProject,
-  azdaProject,
-  iqamtiProject,
-  whiteLabeledEcommerceProject,
-  posEcrSystemsProject,
+export {
+  khurdahClientProject,
+  khurdahDriverProject,
+  khurdahErpLogisticsProject,
+  kufaProject,
+  kufaManagerProject,
   liaProject,
   liaDeliveryProject,
   anaqeedAlFakhaProject,
-  kharadaProject,
+  cardAppProject,
+  liratProject,
+  azdaProject,
+  iqamtiProject,
+  p2pSyriaProject,
+  whiteLabeledEcommerceProject,
+  posEcrSystemsProject,
+  ezhalMowitakProject,
+};
+
+export const allProjects: Project[] = [
+  khurdahClientProject,
+  khurdahDriverProject,
+  khurdahErpLogisticsProject,
+  kufaProject,
+  kufaManagerProject,
+  liaProject,
+  liaDeliveryProject,
+  anaqeedAlFakhaProject,
+  cardAppProject,
+  liratProject,
+  azdaProject,
+  iqamtiProject,
+  p2pSyriaProject,
+  whiteLabeledEcommerceProject,
+  posEcrSystemsProject,
   ezhalMowitakProject,
 ].sort((a, b) => a.order - b.order);
 
@@ -48,7 +73,15 @@ export function getProjectsByCategory(category: ProjectCategory | "All"): Projec
 }
 
 export function getAllCategories(): ("All" | ProjectCategory)[] {
-  return ["All", "FinTech", "E-commerce", "Logistics", "Hospitality", "ERP / POS"];
+  return [
+    "All",
+    "FinTech",
+    "E-commerce",
+    "Food & Delivery",
+    "Logistics",
+    "Hospitality",
+    "ERP / POS",
+  ];
 }
 
 export function getRelatedProjects(currentSlug: string, count: number = 3): Project[] {

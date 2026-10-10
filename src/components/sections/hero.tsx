@@ -130,7 +130,7 @@ export function Hero() {
                   width={400}
                   height={400}
                   priority
-                  className="w-full h-auto aspect-square object-cover object-top filter grayscale contrast-110 hover:grayscale-0 transition-all duration-300"
+                  className="w-full h-auto aspect-square object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
                 />
 
                 <div className="p-4 bg-slate-950/90 border-t border-white/10 space-y-1">

@@ -16,6 +16,7 @@ export function WhatIBring() {
         "SaaS flavor-based, multi-client app environments from a single codebase",
         "Modular, reusable, and testable codebases with decoupled business rules",
         "Performance tuning, sub-second rendering, offline caching, and secure token auth",
+        "Spec-Driven Development (SDD) & AI-agent workflows (Spec-Kit, Superpowers, MCPs) to accelerate velocity and quality",
         "Complex integrations: Payment Gateways, In-App Purchases, Google Maps, WebSockets, and Kotlin/native Android bridges",
       ],
     },

@@ -6,7 +6,7 @@ export const azdaProject: Project = {
   subtitle: "Mobility & Hajj Transit Logistics Platform · Saudi Arabia",
   category: "Logistics",
   featured: true,
-  order: 4,
+  order: 11,
   shortDescription:
     "Mission-critical mobility application managing worker transportation during the high-density Hajj season in Saudi Arabia, coordinating transit between hotels and pilgrimage centers.",
   overview:

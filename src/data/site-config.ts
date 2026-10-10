@@ -60,9 +60,9 @@ export const siteConfig: SiteConfig = {
       description: "Led mobile engineering teams with Agile sprint cycles, code reviews, and developer mentoring.",
     },
     {
-      value: "10+ Domains",
-      label: "Multi-Domain Breadth",
-      description: "Fintech, E-commerce, Logistics, Hospitality, POS/ERP, and On-Demand service platforms.",
+      value: "50K+ Scale",
+      label: "Khurdah Ecosystem",
+      description: "50K+ downloads in 1 year across Saudi Arabia; architected 3-tier mobile platform and led engineering team.",
     },
   ],
   navLinks: [

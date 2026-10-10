@@ -6,7 +6,7 @@ export const iqamtiProject: Project = {
   subtitle: "Hotel Discovery & Direct Reservation Platform · Saudi Arabia",
   category: "Hospitality",
   featured: true,
-  order: 5,
+  order: 12,
   shortDescription:
     "A premier hotel discovery and booking platform across Saudi Arabia, supporting seasonal accommodations, availability calendars, and multi-currency direct booking workflows.",
   overview:

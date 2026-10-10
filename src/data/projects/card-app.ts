@@ -6,7 +6,7 @@ export const cardAppProject: Project = {
   subtitle: "FinTech Card Management & Subscription Hub",
   category: "FinTech",
   featured: true,
-  order: 3,
+  order: 9,
   shortDescription:
     "Engineered a comprehensive card management application providing digital card issuance, transaction limits, security controls, and recurring subscription tracking.",
   overview:

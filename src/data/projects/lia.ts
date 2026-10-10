@@ -12,6 +12,7 @@ export const liaProject: Project = {
   overview:
     "Lia is a premier multi-vendor gifting mobile platform allowing customers to discover artisanal florists and confectioneries, schedule deliveries with personalized greeting cards, and track orders in real time. Mohamed engineered the mobile application with an emphasis on delightful micro-interactions, responsive vendor catalog browsing, and multi-gateway checkout.",
   role: "Senior Flutter Developer",
+  company: "Tasawk",
   technologies: [
     "Flutter",
     "Dart",
@@ -57,6 +58,8 @@ export const liaProject: Project = {
     "Successfully launched on both Google Play and the Apple App Store.",
     "Delivered a smooth, user-centric mobile purchasing flow.",
   ],
+  googlePlayUrl: "https://play.google.com/store/apps/details?id=com.tasawk.liaClient&hl=en",
+  appStoreUrl: "https://apps.apple.com/pk/app/lia/id6756233050",
   tags: ["E-commerce", "Gifting", "Multi-Vendor", "Google Maps", "Payments"],
   relatedProjectSlugs: ["lia-delivery", "white-labeled-ecommerce"],
 };

@@ -39,10 +39,10 @@ export function AiEngineering() {
             <span>Modern Engineering Workflow</span>
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-white">
-            AI as an Engineering Multiplier
+            AI-Agent Engineering & Spec-Driven Development (SDD)
           </h2>
           <p className="text-sm text-slate-400 leading-relaxed">
-            AI does not replace architectural discernment, performance profiling, or defensive mobile security. Instead, I leverage state-of-the-art AI tooling as a force multiplier to eliminate boilerplate, expand automated test coverage, and accelerate delivery velocity.
+            Championing modern agentic engineering workflows and Spec-Driven Development (SDD) using Spec-Kit, Superpowers, and Model Context Protocol (MCP) servers alongside Cursor, Claude, and Copilot to eliminate boilerplate, expand automated test coverage, and accelerate delivery velocity under strict architectural guardrails.
           </p>
         </div>
 
