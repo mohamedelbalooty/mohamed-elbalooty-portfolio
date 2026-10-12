@@ -3,7 +3,7 @@ name: Deploy to Firebase Hosting & GitHub Pages
 on:
   push:
     branches:
-      - main
+      - master
 
 permissions:
   contents: read
@@ -26,20 +26,33 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Run Lint
+        run: npm run lint
+
+      - name: Run TypeScript Type-Check
+        run: npx tsc --noEmit
+
       - name: Build Static Export
         run: npm run build
+
+      - name: Verify Static Export Output
+        run: |
+          test -d out
+          test -f out/index.html
+          test -f out/404.html
+          test -f out/sitemap.xml
+          test -f out/robots.txt
+          echo "Static export verified successfully."
 
       # Firebase Hosting Deployment (Enabled when FIREBASE_SERVICE_ACCOUNT secret is set)
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
-        if: env.FIREBASE_TOKEN != '' || env.FIREBASE_SERVICE_ACCOUNT != ''
+        if: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MOHAMED_ELBALOOTY_PORTFOLIO != '' || secrets.FIREBASE_SERVICE_ACCOUNT != '' }}
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MOHAMED_ELBALOOTY_PORTFOLIO || secrets.FIREBASE_SERVICE_ACCOUNT }}'
           channelId: live
           projectId: mohamed-elbalooty-portfolio
-        env:
-          FIREBASE_CLI_EXPERIMENTS: webframeworks
 
       # GitHub Pages Deployment (Fallback option)
       - name: Upload GitHub Pages Artifact
