@@ -28,6 +28,17 @@ export default function ProjectsPage() {
   return (
     <div className="py-12 md:py-20">
       <Container className="space-y-10">
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumbs" className="flex items-center gap-2 text-xs font-mono text-slate-400">
+          <Link href="/" className="hover:text-indigo-300 transition-colors">
+            Home
+          </Link>
+          <span className="text-slate-600">/</span>
+          <span className="text-indigo-400" aria-current="page">
+            Projects
+          </span>
+        </nav>
+
         {/* Header */}
         <div className="space-y-4 max-w-2xl">
           <div className="inline-flex items-center gap-2 text-xs font-mono text-indigo-400 uppercase tracking-wider">

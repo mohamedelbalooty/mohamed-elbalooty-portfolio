@@ -3,7 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { siteConfig } from "@/data/site-config";
-import { generatePersonJsonLd } from "@/lib/seo";
+import { generatePersonJsonLd, generateWebSiteJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -12,15 +12,32 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.shortBio,
+  alternates: {
+    canonical: siteConfig.siteUrl,
+    languages: {
+      en: siteConfig.siteUrl,
+      ar: `${siteConfig.siteUrl}/ar`,
+      "x-default": siteConfig.siteUrl,
+    },
+  },
   keywords: [
     "Mohamed Elbalooty",
+    "Mohamed Gamal Elbalooty",
+    "Mohamed Elbalaoty",
+    "Mohamed Gamal Elbalaoty",
+    "محمد البلعوطي",
+    "البلعوطي",
     "Senior Flutter Developer",
     "Flutter Team Lead",
     "Flutter Developer Egypt",
+    "Flutter Developer Saudi Arabia",
+    "Senior Mobile Engineer",
     "FinTech Flutter Developer",
     "Clean Architecture Flutter",
-    "Mobile Software Engineer",
-    "Dart Engineer",
+    "Mobile Architecture Consulting",
+    "Mobile Engineering Lead GCC",
+    "Flutter Code Review",
+    "Mobile App Modernization",
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.siteUrl }],
   creator: siteConfig.name,
@@ -36,7 +53,7 @@ export const metadata: Metadata = {
         url: "/images/mohamed.jpg",
         width: 800,
         height: 800,
-        alt: `${siteConfig.name} — Senior Flutter Developer`,
+        alt: `${siteConfig.name} — Senior Flutter Developer & Team Lead`,
       },
     ],
   },
@@ -65,6 +82,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const personJsonLd = generatePersonJsonLd();
+  const webSiteJsonLd = generateWebSiteJsonLd();
 
   return (
     <html lang="en" className="dark">
@@ -72,6 +90,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
         />
       </head>
       <body className="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-indigo-500/30 selection:text-indigo-200">

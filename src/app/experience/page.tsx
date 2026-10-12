@@ -15,16 +15,52 @@ import {
   Sparkles,
 } from "lucide-react";
 
+import { siteConfig } from "@/data/site-config";
+import { generateBreadcrumbJsonLd } from "@/lib/seo";
+
 export const metadata: Metadata = {
   title: "Professional Experience & Engineering Leadership",
   description:
     "Comprehensive career history of Mohamed Elbalooty as Senior Flutter Developer and Flutter Team Leader across FinTech, SaaS, E-commerce, and ERP/POS platforms.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/experience`,
+    languages: {
+      "en": `${siteConfig.siteUrl}/experience`,
+      "x-default": `${siteConfig.siteUrl}/experience`,
+    },
+  },
+  openGraph: {
+    title: "Professional Experience & Engineering Leadership | Mohamed Elbalooty",
+    description:
+      "Comprehensive career history of Mohamed Elbalooty as Senior Flutter Developer and Flutter Team Leader across FinTech, SaaS, E-commerce, and ERP/POS platforms.",
+    url: `${siteConfig.siteUrl}/experience`,
+  },
 };
 
 export default function ExperiencePage() {
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: "Home", item: siteConfig.siteUrl },
+    { name: "Experience", item: `${siteConfig.siteUrl}/experience` },
+  ]);
+
   return (
     <div className="py-12 md:py-20 space-y-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Container className="space-y-12">
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumbs" className="flex items-center gap-2 text-xs font-mono text-slate-400">
+          <Link href="/" className="hover:text-indigo-300 transition-colors">
+            Home
+          </Link>
+          <span className="text-slate-600">/</span>
+          <span className="text-indigo-400" aria-current="page">
+            Experience
+          </span>
+        </nav>
+
         {/* Page Header */}
         <div className="space-y-4 max-w-2xl">
           <div className="inline-flex items-center gap-2 text-xs font-mono text-indigo-400 uppercase tracking-wider">

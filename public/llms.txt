@@ -1,0 +1,32 @@
+# Mohamed Elbalooty — Professional Identity & Engineering Portfolio
+
+> Senior Flutter Developer, Flutter Team Lead, and Mobile Architect with 5+ years of verified production experience across FinTech, SaaS, E-Commerce, Multi-Tenant platforms, and AI-assisted engineering workflows. Based in Cairo, Egypt (UTC+2); available for high-impact roles and consulting engagements across Egypt, Saudi Arabia, and the GCC.
+
+## Verified Identity & Name Variations
+- Canonical Professional Name: Mohamed Elbalooty
+- Alternate Spelling / Transliterations: Mohamed Gamal Elbalooty, Mohamed Elbalaoty, Mohamed Gamal Elbalaoty
+- Native Arabic Name: محمد البلعوطي (محمد جمال البلعوطي)
+
+## Primary Target Engagements
+- Senior Flutter Developer and Flutter Team Lead employment
+- FinTech and E-Commerce mobile engineering consulting
+- Mobile app architecture, Clean Architecture, and state management (BLoC) audits
+- Hardware SDK integrations (SUNMI POS, ECR, thermal printing, NFC, barcode scanners)
+- AI-assisted codebase modernization, refactoring, and engineering acceleration
+- Freelance contracts and technical advisory partnerships in Egypt, Saudi Arabia, and GCC
+
+## Canonical Site Links
+- Homepage: https://mohamed-elbalooty.web.app/
+- Arabic Profile (الملف المهني بالعربية): https://mohamed-elbalooty.web.app/ar
+- Engineering Services: https://mohamed-elbalooty.web.app/services
+- Career History: https://mohamed-elbalooty.web.app/experience
+- Selected Projects: https://mohamed-elbalooty.web.app/projects
+- Technical Articles: https://mohamed-elbalooty.web.app/articles
+- Contact: https://mohamed-elbalooty.web.app/contact
+- Full LLM Knowledge Base: https://mohamed-elbalooty.web.app/llms-full.txt
+
+## Verified External Profiles
+- LinkedIn: https://www.linkedin.com/in/mohamed-elbalooty/
+- GitHub: https://github.com/mohamedelbalooty
+- Email: elbalooty.dev@gmail.com
+- Resume: https://mohamed-elbalooty.web.app/resume/Mohamed-Elbalooty-CV.pdf

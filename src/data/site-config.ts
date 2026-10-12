@@ -1,5 +1,6 @@
 export interface SiteConfig {
   name: string;
+  alternateNames: string[];
   role: string;
   subRole: string;
   tagline: string;
@@ -25,6 +26,13 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "Mohamed Elbalooty",
+  alternateNames: [
+    "Mohamed Gamal Elbalooty",
+    "Mohamed Elbalaoty",
+    "Mohamed Gamal Elbalaoty",
+    "محمد البلعوطي",
+    "البلعوطي",
+  ],
   role: "Flutter Team Lead",
   subRole: "Senior Flutter Engineer",
   tagline:
@@ -33,7 +41,7 @@ export const siteConfig: SiteConfig = {
     "Flutter Team Lead with 5+ years of experience working across the full mobile software lifecycle — architecture, development, testing, release, and ongoing delivery — while leading mobile teams and adapting solutions across FinTech, E-commerce, Logistics, Hospitality, and POS/ERP for clients across Egypt, Saudi Arabia, the UAE, and Kuwait.",
   fullBio: [
     "I am a Flutter Team Lead and Senior Mobile Engineer based in Cairo, Egypt, with 5+ years of experience working across the full mobile software lifecycle — architecture, development, testing, release, and ongoing delivery — while leading mobile teams and adapting solutions to diverse business requirements.",
-    "Currently leading Flutter development at Tasawk, I design scalable, SaaS flavor-based architectures for multi-client deployments and own App Store and Google Play releases across multiple applications. Previously, I led a 5-member mobile team at Geexar, architecting fintech platforms including digital wallets (Lirat), P2P payments, and virtual card products (Card App).",
+    "Having served as Flutter Team Leader at Tasawk, I architected scalable, SaaS flavor-based architectures for multi-client deployments and owned App Store and Google Play releases across multiple applications. Previously, I led a 5-member mobile team at Geexar, architecting fintech platforms including digital wallets (Lirat), P2P payments, and virtual card products (Card App).",
     "I have delivered applications across a wide range of business models — fintech, e-commerce, healthcare, POS/ERP, logistics (including Hajj season mobility in Saudi Arabia), hospitality (IQAMTI hotel booking), and on-demand delivery — working with clients across Egypt, Saudi Arabia, the UAE, and Kuwait.",
   ],
   location: "Cairo, Egypt",
@@ -67,6 +75,7 @@ export const siteConfig: SiteConfig = {
   ],
   navLinks: [
     { title: "Selected Work", href: "/projects" },
+    { title: "Services", href: "/services" },
     { title: "Experience", href: "/experience" },
     { title: "Engineering Profile", href: "/about" },
     { title: "Technical Notes", href: "/articles" },

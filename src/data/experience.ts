@@ -21,11 +21,11 @@ export const experiences: ExperienceItem[] = [
   {
     company: "Tasawk",
     role: "Flutter Team Leader",
-    period: "Jul. 2025 – Present",
-    isCurrent: true,
+    period: "Jul. 2025 – Present [Final end date pending user confirmation]",
+    isCurrent: false,
     location: "Cairo, Egypt",
     summary:
-      "Leading mobile engineering across Flutter applications, architecting multi-client SaaS flavor architectures, driving Spec-Driven Development (SDD) & AI-agent workflows (Spec-Kit, Superpowers, MCPs), and managing the end-to-end mobile release lifecycle.",
+      "Led mobile engineering across Flutter applications, architecting multi-client SaaS flavor architectures, driving Spec-Driven Development (SDD) & AI-agent workflows (Spec-Kit, Superpowers, MCPs), and managing the end-to-end mobile release lifecycle.",
     responsibilities: [
       "Architected and delivered the 3-application Khurdah circular economy ecosystem (Customer, Driver, and ERP Logistics apps), surpassing 50K+ downloads in 1 year across Saudi Arabia while hiring and leading the engineering team.",
       "Architected and launched the Al-Kufa Food Company QSR mobile ecosystem (Customer ordering app achieving 10K+ downloads in 1 year and Kufa Manager with Sunmi POS terminal integration) across 19 branches Kingdom-wide, while hiring and mentoring the technical engineering team.",

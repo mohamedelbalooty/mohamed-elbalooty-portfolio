@@ -6,7 +6,8 @@ import { articles, getArticleBySlug } from "@/data/articles";
 import { getProjectBySlug } from "@/data/projects";
 import { Container } from "@/components/layout/container";
 import { formatDate } from "@/lib/utils";
-import { generateArticleJsonLd } from "@/lib/seo";
+import { generateArticleJsonLd, generateBreadcrumbJsonLd } from "@/lib/seo";
+import { siteConfig } from "@/data/site-config";
 import { ArrowLeft, Clock, Calendar, ArrowRight, User } from "lucide-react";
 
 interface ArticlePageProps {
@@ -29,13 +30,22 @@ export async function generateMetadata({
     return { title: "Article Not Found" };
   }
 
-  const title = `${article.title} | Mohamed Elbalooty`;
+  const title = article.title;
+  const canonicalUrl = `${siteConfig.siteUrl}/articles/${article.slug}`;
   return {
     title,
     description: article.summary,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        "en": canonicalUrl,
+        "x-default": canonicalUrl,
+      },
+    },
     openGraph: {
-      title,
+      title: `${title} | Mohamed Elbalooty`,
       description: article.summary,
+      url: canonicalUrl,
       type: "article",
       publishedTime: article.publishedAt,
       authors: [article.author],
@@ -57,6 +67,11 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
   }
 
   const jsonLd = generateArticleJsonLd(article);
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: "Home", item: siteConfig.siteUrl },
+    { name: "Articles", item: `${siteConfig.siteUrl}/articles` },
+    { name: article.title, item: `${siteConfig.siteUrl}/articles/${article.slug}` },
+  ]);
 
   return (
     <article className="py-12 md:py-20">
@@ -64,16 +79,34 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       <Container className="space-y-12 max-w-4xl">
-        {/* Back link */}
-        <div>
+        {/* Breadcrumb & Back Navigation */}
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <nav aria-label="Breadcrumbs" className="flex items-center gap-2 text-xs font-mono text-slate-400">
+            <Link href="/" className="hover:text-indigo-300 transition-colors">
+              Home
+            </Link>
+            <span className="text-slate-600">/</span>
+            <Link href="/articles" className="hover:text-indigo-300 transition-colors">
+              Articles
+            </Link>
+            <span className="text-slate-600">/</span>
+            <span className="text-indigo-400 truncate max-w-[200px] sm:max-w-none" aria-current="page">
+              {article.title}
+            </span>
+          </nav>
+
           <Link
             href="/articles"
             className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 hover:text-white transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Back to all articles</span>
+            <span>All articles</span>
           </Link>
         </div>
 
