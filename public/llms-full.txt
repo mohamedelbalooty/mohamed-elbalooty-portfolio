@@ -1,0 +1,94 @@
+# Mohamed Elbalooty — Full Professional Entity & Engineering Profile
+
+## Entity Overview
+- Canonical Name: Mohamed Elbalooty
+- Professional Title: Senior Flutter Developer | Flutter Team Lead | Mobile Systems Architect
+- Alternate Names: Mohamed Gamal Elbalooty, Mohamed Elbalaoty, Mohamed Gamal Elbalaoty
+- Arabic Name: محمد البلعوطي (محمد جمال البلعوطي)
+- Location: Cairo, Egypt (UTC+2)
+- Target Markets: Egypt, Saudi Arabia (KSA), United Arab Emirates (UAE), Kuwait, Qatar, Bahrain, Oman, and remote GCC/global roles
+- Verified LinkedIn: https://www.linkedin.com/in/mohamed-elbalooty/
+- Verified GitHub: https://github.com/mohamedelbalooty
+- Direct Email: elbalooty.dev@gmail.com
+- Phone: +201016853653
+- Canonical Website: https://mohamed-elbalooty.web.app/
+
+---
+
+## Professional Career History (Source: Verified CV)
+
+### 1. Tasawk (Saudi Arabia / Remote)
+- Role: Flutter Team Leader / Senior Flutter Developer
+- Period: Jul. 2025 – Present [Final end date pending user confirmation]
+- Scope & Achievements:
+  - Led a mobile engineering squad delivering enterprise e-commerce, multi-tenant merchant applications, and hardware-integrated POS systems for the Saudi & GCC markets.
+  - Architected a white-label multi-tenant e-commerce mobile architecture, cutting time-to-market for onboarding new tenant brands from 3+ weeks down to under 3 days through modular UI theming, dynamic configuration, and decoupled API layers.
+  - Engineered hardware POS and ECR integrations directly interfacing with SUNMI Android POS hardware via custom platform channels, supporting dual-screen customer displays, high-speed thermal printing, barcode scanners, and payment gateways.
+  - Enforced strict code review standards, Clean Architecture separation of concerns, BLoC state management patterns, and automated CI/CD distribution via Fastlane.
+
+### 2. Expert App (Cairo, Egypt)
+- Role: Flutter Developer
+- Period: Nov. 2023 – Jun. 2025
+- Scope & Achievements:
+  - Engineered core mobile applications with strict Clean Architecture, modular state management, and end-to-end API integration.
+  - Delivered FinTech applications featuring real-time biometric authentication, encrypted local credential storage, idempotent payment dispatching, and zero-downtime offline caching.
+  - Spearheaded performance optimization efforts across legacy codebases, resolving frame drops, eliminating memory leaks in image caching pipelines, and reducing cold-start times.
+
+### 3. Independent Software Engineering & Mobile Consulting
+- Role: Mobile Engineer & Technical Consultant
+- Period: Jan. 2021 – Present
+- Scope: Delivered bespoke mobile applications for startups and enterprise clients across FinTech, digital currency, real-time messaging, and logistics.
+
+---
+
+## Production Projects & Case Studies
+
+### 1. Lirat (FinTech & Currency Tracking)
+- Category: FinTech / SaaS Mobile Application
+- Tech Stack: Flutter, Dart, Clean Architecture, BLoC, Dio, Hive, WebSockets, Secure Storage
+- Overview: Real-time currency exchange tracker and financial portfolio app delivering millisecond-accurate exchange rates, cross-currency conversion engines, and multi-asset tracking under volatile macroeconomic conditions.
+- Architectural Highlights: Local-first caching with Hive, resilient WebSocket reconnection fallback to exponential backoff HTTP polling, and secure biometric token persistence.
+
+### 2. P2P Syria (Peer-to-Peer Financial Transfer Network)
+- Category: FinTech / Peer-to-Peer Transactions
+- Tech Stack: Flutter, Dart, Clean Architecture, BLoC, Dio, Local Authentication, Secure Storage
+- Overview: Secure decentralized peer-to-peer transaction and escrow coordination network engineered for secure fund exchange and verification.
+- Architectural Highlights: Client-side cryptographic signature verification, zero-leak local storage, anti-tamper security checks, and strict idempotency tokens on network requests.
+
+### 3. Card App (Digital Payment & Gift Card Voucher Marketplace)
+- Category: E-Commerce / Digital Payments
+- Tech Stack: Flutter, Dart, BLoC, In-App Purchases, Payment Gateways, Dio, Secure Storage
+- Overview: Digital payment, gift card, and gaming voucher marketplace offering instant redemption codes, multi-currency wallet management, and secure checkout.
+
+### 4. White-Label E-Commerce Multi-Tenant Framework
+- Category: Multi-Tenant Architecture / Enterprise Mobile
+- Tech Stack: Flutter, Dart, Clean Architecture, Dynamic Theming, Modular Packages, Fastlane
+- Overview: Enterprise white-label framework powering multiple live storefronts across Saudi Arabia from a unified core codebase. Reduced new tenant release cycles by over 80%.
+
+### 5. Hardware POS / ECR Mobile Integration
+- Category: POS & Hardware SDKs / Enterprise Retail
+- Tech Stack: Flutter, Android Platform Channels, SUNMI SDK, ESC/POS, Thermal Printing, USB/Serial
+- Overview: Retail POS workstation running on SUNMI Android hardware with customer dual-display synchronization, hardware barcode scanning, and ESC/POS thermal printing.
+
+---
+
+## Consulting Services & Engagement Models
+
+### Service 1: FinTech & E-Commerce Mobile Engineering
+- Problem: Critical payment bugs, slow checkout conversions, hardware POS integration issues, or non-scalable e-commerce architectures.
+- Deliverables: Clean Architecture codebase, secure payment/escrow pipelines, hardware SDK platform channels, App Store and Google Play publication.
+
+### Service 2: Mobile Architecture, Technical Leadership & Team Building
+- Problem: Mobile teams experiencing architectural friction, merge conflicts, regression bugs, or lack of code review standards.
+- Deliverables: Comprehensive codebase audit report, architecture design documents, CI/CD pipeline setup, team mentoring, and pull request reviews.
+
+### Service 3: AI-Assisted Modernization & Refactoring of Legacy Mobile Apps
+- Problem: Outdated Flutter/Dart codebases, deprecated packages, performance bottlenecks, tech debt slowing feature delivery.
+- Deliverables: Modernization roadmap, package migration, BLoC state management upgrade, comprehensive test suite, zero-regression refactoring using spec-driven development and AI tooling.
+
+---
+
+## Education & Languages
+- Bachelor's Degree: Computer Science, Faculty of Science, Damanhour University (2020 – 2024)
+- Arabic: Native (اللغة العربية: لغة أم)
+- English: Professional Working Proficiency

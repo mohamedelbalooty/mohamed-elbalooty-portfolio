@@ -4,20 +4,54 @@ import { Metadata } from "next";
 import { getAllArticles } from "@/data/articles";
 import { Container } from "@/components/layout/container";
 import { formatDate } from "@/lib/utils";
+import { siteConfig } from "@/data/site-config";
+import { generateBreadcrumbJsonLd } from "@/lib/seo";
 import { BookOpen, ArrowUpRight, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Technical Notes & Architecture Articles",
   description:
     "Engineering articles and technical write-ups on Flutter Clean Architecture, FinTech mobile reliability, and AI-assisted workflows by Mohamed Elbalooty.",
+  alternates: {
+    canonical: `${siteConfig.siteUrl}/articles`,
+    languages: {
+      "en": `${siteConfig.siteUrl}/articles`,
+      "x-default": `${siteConfig.siteUrl}/articles`,
+    },
+  },
+  openGraph: {
+    title: "Technical Notes & Architecture Articles | Mohamed Elbalooty",
+    description:
+      "Engineering articles and technical write-ups on Flutter Clean Architecture, FinTech mobile reliability, and AI-assisted workflows by Mohamed Elbalooty.",
+    url: `${siteConfig.siteUrl}/articles`,
+  },
 };
 
 export default function ArticlesPage() {
   const articles = getAllArticles();
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: "Home", item: siteConfig.siteUrl },
+    { name: "Articles", item: `${siteConfig.siteUrl}/articles` },
+  ]);
 
   return (
     <div className="py-12 md:py-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Container className="space-y-12">
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumbs" className="flex items-center gap-2 text-xs font-mono text-slate-400">
+          <Link href="/" className="hover:text-indigo-300 transition-colors">
+            Home
+          </Link>
+          <span className="text-slate-600">/</span>
+          <span className="text-indigo-400" aria-current="page">
+            Articles
+          </span>
+        </nav>
+
         {/* Header */}
         <div className="space-y-4 max-w-2xl">
           <div className="inline-flex items-center gap-2 text-xs font-mono text-indigo-400 uppercase tracking-wider">

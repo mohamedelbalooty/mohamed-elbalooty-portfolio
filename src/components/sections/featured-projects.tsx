@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { getFeaturedProjects } from "@/data/projects";
+import { getFeaturedProjects, allProjects } from "@/data/projects";
 import { Container } from "../layout/container";
 import { ArrowUpRight, ArrowRight, Layers, Building2 } from "lucide-react";
 
@@ -21,7 +21,7 @@ export function FeaturedProjects() {
               Production Work & Architecture
             </h2>
             <p className="text-sm text-slate-400 max-w-xl">
-              Real-world systems engineered across FinTech SaaS, multi-tenant mobile platforms, and hardware POS integrations. Built with Clean Architecture and zero tolerance for failure.
+              Real-world systems engineered across FinTech SaaS, logistics, hospitality, multi-tenant mobile platforms, and hardware POS integrations. Built with Clean Architecture and zero tolerance for failure.
             </p>
           </div>
 
@@ -29,7 +29,7 @@ export function FeaturedProjects() {
             href="/projects"
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-400 hover:text-indigo-300 font-mono group"
           >
-            <span>View All 10 Projects</span>
+            <span>View All {allProjects.length} Projects</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </Link>
         </div>
@@ -87,8 +87,8 @@ export function FeaturedProjects() {
                 )}
               </div>
 
-              {/* Technologies footer */}
-              <div className="pt-4 mt-6 border-t border-white/5">
+              {/* Technologies & Store Status footer */}
+              <div className="pt-4 mt-6 border-t border-white/5 space-y-2">
                 <div className="flex flex-wrap gap-1.5">
                   {project.technologies.slice(0, 4).map((tech) => (
                     <span
@@ -104,6 +104,13 @@ export function FeaturedProjects() {
                     </span>
                   )}
                 </div>
+
+                {(project.googlePlayUrl || project.appStoreUrl) && (
+                  <div className="flex items-center gap-2 text-[10px] font-mono text-emerald-400 font-medium">
+                    {project.googlePlayUrl && <span>✓ Google Play</span>}
+                    {project.appStoreUrl && <span>✓ App Store</span>}
+                  </div>
+                )}
               </div>
             </Link>
           ))}

@@ -52,6 +52,14 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/ar"
+                  className="hover:text-white transition-colors text-indigo-400 font-mono text-xs flex items-center gap-1"
+                >
+                  <span>العربية (Arabic Profile)</span>
+                </Link>
+              </li>
             </ul>
           </div>
 

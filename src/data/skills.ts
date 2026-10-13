@@ -76,8 +76,17 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "AI-Assisted Engineering",
-    description: "Leveraging state-of-the-art AI tooling as an engineering multiplier.",
-    skills: ["ChatGPT", "GitHub Copilot", "Cursor", "Claude"],
+    title: "AI-Agent Tools & Workflows",
+    description: "Agentic scaffolding, Spec-Driven Development (SDD), and model context protocols.",
+    skills: [
+      "Spec-Kit",
+      "Superpowers",
+      "Agent Skills",
+      "MCPs (Model Context Protocol)",
+      "Cursor",
+      "Claude",
+      "GitHub Copilot",
+      "ChatGPT",
+    ],
   },
 ];

@@ -22,7 +22,7 @@ export function Hero() {
             {/* Status Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/20 bg-indigo-950/40 text-xs font-mono text-indigo-300">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Senior Flutter Developer & Team Lead · Cairo, Egypt</span>
+              <span>Flutter Team Lead & Senior Flutter Engineer · Cairo, Egypt</span>
             </div>
 
             {/* Headline */}
@@ -31,26 +31,36 @@ export function Hero() {
                 {siteConfig.name}
               </h1>
               <p className="text-xl sm:text-2xl font-medium text-slate-300 tracking-tight">
-                Architecting resilient mobile products with Clean Architecture, production ownership, and engineering leadership.
+                {siteConfig.tagline}
               </p>
             </div>
 
             {/* Factual Narrative Bio */}
             <p className="text-base text-slate-400 max-w-2xl leading-relaxed">
-              5+ years of software engineering experience delivering high-performance cross-platform applications across{" "}
-              <span className="text-slate-200 font-medium">FinTech</span> (digital wallets, P2P payments, card systems),{" "}
-              <span className="text-slate-200 font-medium">multi-tenant E-commerce</span>, and{" "}
-              <span className="text-slate-200 font-medium">ERP/POS hardware integrations</span>. Experienced in leading 5-member engineering squads, SaaS flavor releases, and automated CI/CD.
+              5+ years of experience working across the full mobile software lifecycle —{" "}
+              <span className="text-slate-200 font-medium">architecture, development, testing, release, and ongoing delivery</span>. Former Flutter Team Leader at{" "}
+              <span className="text-slate-200 font-medium">Tasawk</span> (SaaS flavor-based architectures) and previously led a{" "}
+              <span className="text-slate-200 font-medium">5-member mobile squad</span> at Geexar, delivering high-impact products across{" "}
+              <span className="text-slate-200 font-medium">Egypt, Saudi Arabia, the UAE, and Kuwait</span>.
             </p>
 
-            {/* CTAs */}
+            {/* Two Clear Conversion Journeys: Recruiters & Clients */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
+              {/* Recruiter & Primary Work Journey */}
               <Link
                 href="/projects"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-md shadow-indigo-600/20 transition-all duration-150"
               >
-                <span>View Selected Work</span>
+                <span>Selected Work</span>
                 <ArrowRight className="w-4 h-4" />
+              </Link>
+
+              {/* Client & Consulting Journey */}
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-slate-200 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-150"
+              >
+                <span>Engineering Services</span>
               </Link>
 
               <a
@@ -58,10 +68,10 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 download="Mohamed-Elbalooty-CV.pdf"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-slate-200 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-150"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-150"
               >
                 <FileDown className="w-4 h-4 text-indigo-400" />
-                <span>Download CV</span>
+                <span>CV (PDF)</span>
               </a>
 
               <div className="flex items-center gap-1.5 pl-2">
@@ -103,7 +113,11 @@ export function Hero() {
               </span>
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                FinTech & Payment Gateway Integrations
+                SaaS Flavor-Based Multi-Client Systems
+              </span>
+              <span className="flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                FinTech, Logistics, Hospitality & POS
               </span>
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
@@ -125,7 +139,7 @@ export function Hero() {
                   width={400}
                   height={400}
                   priority
-                  className="w-full h-auto aspect-square object-cover object-top filter grayscale contrast-110 hover:grayscale-0 transition-all duration-300"
+                  className="w-full h-auto aspect-square object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
                 />
 
                 <div className="p-4 bg-slate-950/90 border-t border-white/10 space-y-1">
@@ -134,7 +148,7 @@ export function Hero() {
                     <span className="text-indigo-400">Team Leader</span>
                   </div>
                   <p className="text-[11px] text-slate-400">
-                    Tasawk · Cairo, Egypt
+                    Cairo, Egypt · Egypt & GCC Delivery
                   </p>
                 </div>
               </div>

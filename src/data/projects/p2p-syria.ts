@@ -6,7 +6,7 @@ export const p2pSyriaProject: Project = {
   subtitle: "SaaS Peer-to-Peer Financial Exchange Platform",
   category: "FinTech",
   featured: true,
-  order: 2,
+  order: 13,
   shortDescription:
     "Architected and engineered a SaaS peer-to-peer financial transfer platform with real-time transaction tracking and robust security protocols.",
   overview:

@@ -1,0 +1,54 @@
+name: Preview Deployment on Pull Request
+
+on:
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+
+jobs:
+  build-and-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Lint
+        run: npm run lint
+
+      - name: Run TypeScript Type-Check
+        run: npx tsc --noEmit
+
+      - name: Build Static Export
+        run: npm run build
+
+      - name: Verify Static Export Output
+        run: |
+          test -d out
+          test -f out/index.html
+          test -f out/404.html
+          test -f out/sitemap.xml
+          test -f out/robots.txt
+          echo "Static export verified successfully."
+
+      # Firebase Preview Channel Deployment
+      - name: Deploy Preview to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        if: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MOHAMED_ELBALOOTY_PORTFOLIO != '' || secrets.FIREBASE_SERVICE_ACCOUNT != '' }}
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MOHAMED_ELBALOOTY_PORTFOLIO || secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          projectId: mohamed-elbalooty-portfolio

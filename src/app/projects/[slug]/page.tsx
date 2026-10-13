@@ -6,7 +6,8 @@ import { allProjects, getProjectBySlug, getRelatedProjects } from "@/data/projec
 import { Container } from "@/components/layout/container";
 import { ArchitectureDiagram } from "@/components/case-study/architecture-diagram";
 import { DecisionCard } from "@/components/case-study/decision-card";
-import { generateProjectJsonLd } from "@/lib/seo";
+import { generateProjectJsonLd, generateBreadcrumbJsonLd } from "@/lib/seo";
+import { siteConfig } from "@/data/site-config";
 import {
   ArrowLeft,
   ArrowRight,
@@ -42,20 +43,29 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${project.title} — ${project.category} Project | Mohamed Elbalooty`;
+  const title = `${project.title} — ${project.category} Case Study`;
   const description = project.shortDescription;
+  const canonicalUrl = `${siteConfig.siteUrl}/projects/${project.slug}`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        "en": canonicalUrl,
+        "x-default": canonicalUrl,
+      },
+    },
     openGraph: {
-      title,
+      title: `${title} | Mohamed Elbalooty`,
       description,
+      url: canonicalUrl,
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: `${title} | Mohamed Elbalooty`,
       description,
     },
   };
@@ -71,6 +81,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
   const related = getRelatedProjects(project.slug, 3);
   const jsonLd = generateProjectJsonLd(project);
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: "Home", item: siteConfig.siteUrl },
+    { name: "Projects", item: `${siteConfig.siteUrl}/projects` },
+    { name: project.title, item: `${siteConfig.siteUrl}/projects/${project.slug}` },
+  ]);
 
   return (
     <article className="py-12 md:py-20 space-y-16">
@@ -78,16 +93,34 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       <Container className="space-y-12">
-        {/* Back Link */}
-        <div>
+        {/* Breadcrumb & Back Navigation */}
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <nav aria-label="Breadcrumbs" className="flex items-center gap-2 text-xs font-mono text-slate-400">
+            <Link href="/" className="hover:text-indigo-300 transition-colors">
+              Home
+            </Link>
+            <span className="text-slate-600">/</span>
+            <Link href="/projects" className="hover:text-indigo-300 transition-colors">
+              Projects
+            </Link>
+            <span className="text-slate-600">/</span>
+            <span className="text-indigo-400 truncate max-w-[200px] sm:max-w-none" aria-current="page">
+              {project.title}
+            </span>
+          </nav>
+
           <Link
             href="/projects"
             className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 hover:text-white transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Back to all projects</span>
+            <span>All projects</span>
           </Link>
         </div>
 

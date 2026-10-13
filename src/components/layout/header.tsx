@@ -54,6 +54,15 @@ export function Header() {
 
         {/* CTA Actions */}
         <div className="hidden sm:flex items-center space-x-3">
+          {/* Language Switch */}
+          <Link
+            href={pathname?.startsWith("/ar") ? "/" : "/ar"}
+            className="px-2.5 py-1 text-xs font-semibold rounded-md border border-white/10 bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 transition-colors font-mono"
+            title={pathname?.startsWith("/ar") ? "Switch to English" : "الانتقال إلى النسخة العربية"}
+          >
+            {pathname?.startsWith("/ar") ? "EN" : "عربي"}
+          </Link>
+
           <a
             href={siteConfig.resumeUrl}
             target="_blank"
@@ -77,6 +86,14 @@ export function Header() {
 
         {/* Mobile Menu Toggle Button */}
         <div className="flex md:hidden items-center space-x-2">
+          <Link
+            href={pathname?.startsWith("/ar") ? "/" : "/ar"}
+            className="px-2 py-1 text-xs font-semibold rounded-md border border-white/10 bg-white/5 text-slate-300 font-mono"
+            aria-label="Toggle language"
+          >
+            {pathname?.startsWith("/ar") ? "EN" : "عربي"}
+          </Link>
+
           <a
             href={siteConfig.resumeUrl}
             target="_blank"
@@ -128,6 +145,16 @@ export function Header() {
                 </Link>
               );
             })}
+            <Link
+              href={pathname?.startsWith("/ar") ? "/" : "/ar"}
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 text-base font-medium rounded-md text-indigo-300 bg-white/5 flex items-center justify-between"
+            >
+              <span>{pathname?.startsWith("/ar") ? "English Version" : "النسخة العربية (Arabic Profile)"}</span>
+              <span className="font-mono text-xs text-indigo-400">
+                {pathname?.startsWith("/ar") ? "EN" : "عربي"}
+              </span>
+            </Link>
           </nav>
 
           <div className="pt-4 border-t border-white/10 flex flex-col space-y-2">

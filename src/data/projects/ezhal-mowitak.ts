@@ -6,7 +6,7 @@ export const ezhalMowitakProject: Project = {
   subtitle: "Smart Bottled Water Distribution & Delivery Platform",
   category: "E-commerce",
   featured: false,
-  order: 10,
+  order: 16,
   shortDescription:
     "On-demand bottled water delivery platform offering recurring subscription deliveries, carton size selection, and rapid residential and commercial fulfillment.",
   overview:
@@ -36,8 +36,6 @@ export const ezhalMowitakProject: Project = {
   outcomes: [
     "Deployed to Google Play and Apple App Store, streamlining everyday utility delivery.",
   ],
-  appStoreUrl: "[ADD APP STORE URL]",
-  googlePlayUrl: "[ADD GOOGLE PLAY URL]",
   tags: ["E-commerce", "Delivery", "Subscriptions", "Logistics", "Utilities"],
-  relatedProjectSlugs: ["kharada"],
+  relatedProjectSlugs: ["khurdah-client"],
 };
